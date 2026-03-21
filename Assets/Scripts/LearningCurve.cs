@@ -134,9 +134,13 @@ public class LearningCurve : MonoBehaviour
         heroine.PrintStatsInfo();
 
         Weapon HuntingBow = new Weapon("Hunting Bow", 135);
+        Weapon warBow = HuntingBow;
+
+        warBow.name = "War Bow";
+        warBow.damage = 155;
 
         HuntingBow.PrintWeaponInfo();
-
+        warBow.PrintWeaponInfo();
 
 
 

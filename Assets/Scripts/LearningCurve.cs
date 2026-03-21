@@ -124,7 +124,11 @@ public class LearningCurve : MonoBehaviour
         }
 
         Character hero = new Character();
+        Character hero2 = hero;
+        hero2.name = "Sir De Vithoghnton to 2";
         hero.PrintStatsInfo();
+        hero2.PrintStatsInfo();
+       
 
         Character heroine = new Character("Agatha");
         heroine.PrintStatsInfo();
@@ -132,6 +136,9 @@ public class LearningCurve : MonoBehaviour
         Weapon HuntingBow = new Weapon("Hunting Bow", 135);
 
         HuntingBow.PrintWeaponInfo();
+
+
+
 
     }
 

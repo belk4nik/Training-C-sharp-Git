@@ -23,9 +23,11 @@ public class LearningCurve : MonoBehaviour
 
     public bool hasDungeonKey = true;
 
+    private Transform camTransform;
+    private Transform lightTransform;
 
+    public GameObject directionLight;
 
-    
 
 
 
@@ -143,9 +145,16 @@ public class LearningCurve : MonoBehaviour
         HuntingBow.PrintWeaponInfo();
         warBow.PrintWeaponInfo();
 
-        Paladin knight = new Paladin("Sir Lancelot");
+        Paladin knight = new Paladin("Sir Lancelot",HuntingBow);
         knight.PrintStatsInfo();
 
+        camTransform = this.GetComponent<Transform>();
+        Debug.Log(camTransform.localPosition);
+
+        //directionLight = GameObject.Find("Directional Light");
+
+        lightTransform = directionLight.GetComponent<Transform>();
+        Debug.Log(lightTransform.localPosition);
 
     }
 
